@@ -1,0 +1,379 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  position: relative;
+  color: white;
+  overflow-x: hidden;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.hero {
+  text-align: center;
+  padding: 180px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ffa500;
+}
+
+section {
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.6);
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.course-item {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #ffa500;
+}
+
+.contact p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* KHÓA HỌC */
+
+.courses {
+  padding: 80px 20px 60px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.courses h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.course-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  backdrop-filter: blur(6px);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+  transform: translateY(-6px);
+}
+
+.course-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.course-item h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffa500;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ccc;
+  font-size: 14px;
+}
+
+
+/* GIỚI THIỆU */
+
+.about {
+  padding: 80px 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffcc00;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-text ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about-text li {
+  list-style: disc;
+  margin-bottom: 8px;
+}
+
+/* ĐÁNH GIÁ */
+
+.testimonials {
+  padding: 60px 20px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-item {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #eee;
+}
+
+.testimonial-item strong {
+  display: block;
+  margin-top: 10px;
+  color: #ffd700;
+}
+
+/* LIÊN HỆ */
+
+.contact {
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 34px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.contact .intro {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact form {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+
+.contact-info {
+  flex: 1 1 280px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact-info a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.contact-info a.cta-button {
+  display: inline-block;
+  margin-top: 15
