@@ -1,5 +1,4 @@
-/* style.css */
-
+/* ===== CƠ BẢN ===== */
 * {
   margin: 0;
   padding: 0;
@@ -13,27 +12,29 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== VIDEO NỀN ===== */
 .video-bg {
   position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: -1;
   object-fit: cover;
+  z-index: -1;
   filter: brightness(0.4);
 }
 
+/* ===== MENU ===== */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  z-index: 1;
+  z-index: 10;
 }
 
 nav a {
@@ -43,10 +44,12 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: #ffd700;
 }
 
+/* ===== HERO ===== */
 .hero {
   text-align: center;
   padding: 180px 20px 100px;
@@ -77,73 +80,22 @@ nav a:hover {
   background: #ffa500;
 }
 
+/* ===== SECTION CHUNG ===== */
 section {
-  padding: 60px 20px;
-  background: rgba(0,0,0,0.6);
-}
-
-section h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.course-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.course-item {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  text-align: center;
-}
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input, form button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
-form button {
-  background: #ffcc00;
-  color: black;
-  font-weight: bold;
-}
-
-form button:hover {
-  background: #ffa500;
-}
-
-.contact p {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* KHÓA HỌC */
-
-.courses {
-  padding: 80px 20px 60px;
+  padding: 80px 20px;
   background: rgba(0, 0, 0, 0.6);
 }
 
-.courses h2 {
+/* ===== KHOÁ HỌC ===== */
+.courses h2,
+.about h2,
+.contact h2,
+.testimonials h2,
+.cohorts h2 {
   text-align: center;
   font-size: 36px;
   color: #ffcc00;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .intro {
@@ -165,8 +117,8 @@ form button:hover {
   padding: 20px;
   border-radius: 10px;
   width: 300px;
+  color: white;
   backdrop-filter: blur(6px);
-  color: #fff;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -188,48 +140,7 @@ form button:hover {
   margin-bottom: 10px;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: #ffcc00;
-  color: #000;
-  font-weight: bold;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #ffa500;
-}
-
-/* FOOTER */
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ccc;
-  font-size: 14px;
-}
-
-
-/* GIỚI THIỆU */
-
-.about {
-  padding: 80px 20px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-}
-
-.about h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #ffcc00;
-}
-
+/* ===== GIỚI THIỆU ===== */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -266,21 +177,7 @@ footer {
   margin-bottom: 8px;
 }
 
-/* ĐÁNH GIÁ */
-
-.testimonials {
-  padding: 60px 20px;
-  background: rgba(255,255,255,0.1);
-  color: white;
-}
-
-.testimonials h2 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #ffcc00;
-}
-
+/* ===== ĐÁNH GIÁ ===== */
 .testimonial-list {
   display: flex;
   flex-wrap: wrap;
@@ -305,28 +202,7 @@ footer {
   color: #ffd700;
 }
 
-/* LIÊN HỆ */
-
-.contact {
-  padding: 80px 20px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-}
-
-.contact h2 {
-  text-align: center;
-  font-size: 34px;
-  color: #ffcc00;
-  margin-bottom: 10px;
-}
-
-.contact .intro {
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 40px;
-  color: #ccc;
-}
-
+/* ===== LIÊN HỆ ===== */
 .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -349,6 +225,19 @@ footer {
   border-radius: 5px;
   border: none;
   resize: none;
+}
+
+.contact form button {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact form button:hover {
+  background: #ffa500;
 }
 
 .contact-info {
@@ -376,4 +265,47 @@ footer {
 
 .contact-info a.cta-button {
   display: inline-block;
-  margin-top: 15
+  margin-top: 15px;
+}
+
+/* ===== KHÓA HỌC - HÀNH TRÌNH ===== */
+.cohorts {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.cohort-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cohort-item {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  width: 480px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+}
+
+.cohort-item h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #ffcc00;
+}
+
+.cohort-item p {
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ccc;
+  font-size: 14px;
+}
